@@ -100,13 +100,13 @@
         </a>
         <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav"> -->
-                <!-- <li class="nav-item active">
+        <!-- <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li> -->
 
-                <!-- This menu is hidden in bigger devices with d-sm-none. 
+        <!-- This menu is hidden in bigger devices with d-sm-none. 
              The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-                <!-- <li class="nav-item dropdown d-sm-block d-md-none">
+        <!-- <li class="nav-item dropdown d-sm-block d-md-none">
                     <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Menu
@@ -118,9 +118,9 @@
                         <a class="dropdown-item" href="#">Etc ...</a>
                     </div>
                 </li> -->
-                <!-- Smaller devices menu END -->
+        <!-- Smaller devices menu END -->
 
-            <!-- </ul>
+        <!-- </ul>
         </div> -->
     </nav><!-- NavBar END -->
 
@@ -128,23 +128,23 @@
     <!-- Bootstrap row -->
     <!-- <div class="row" id="body-row">
         Sidebar -->
-        <!-- <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"> -->
-            <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
-            <!-- Bootstrap List Group -->
-            <!-- <ul class="list-group"> -->
-                <!-- Separator with title -->
-                <!-- <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+    <!-- <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"> -->
+    <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <!-- Bootstrap List Group -->
+    <!-- <ul class="list-group"> -->
+    <!-- Separator with title -->
+    <!-- <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     <small>MAIN MENU</small> -->
-                <!-- </li> -->
-                <!-- /END Separator -->
-                <!-- Menu with submenu -->
-                <!-- <a href="#" class="bg-dark list-group-item list-group-item-action">
+    <!-- </li> -->
+    <!-- /END Separator -->
+    <!-- Menu with submenu -->
+    <!-- <a href="#" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-question fa-fw mr-3"></span>
                         <span class="menu-collapsed">Link 1</span>
                     </div>
                 </a> -->
-                <!-- <a href="#submenu1" data-toggle="collapse" aria-expanded="false"
+    <!-- <a href="#submenu1" data-toggle="collapse" aria-expanded="false"
                     class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-dashboard fa-fw mr-3"></span>
@@ -152,8 +152,8 @@
                         <span class="submenu-icon ml-auto"></span>
                     </div>
                 </a> -->
-                <!-- Submenu content -->
-                <!-- <div id='submenu1' class="collapse sidebar-submenu">
+    <!-- Submenu content -->
+    <!-- <div id='submenu1' class="collapse sidebar-submenu">
                     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Charts</span>
                     </a>
@@ -164,34 +164,34 @@
                         <span class="menu-collapsed">Tables</span>
                     </a>
                 </div> -->
-                <!-- Separator without title -->
-                <!-- <li class="list-group-item sidebar-separator menu-collapsed"></li> -->
-                <!-- /END Separator -->
-                <!-- <a href="#" class="bg-dark list-group-item list-group-item-action">
+    <!-- Separator without title -->
+    <!-- <li class="list-group-item sidebar-separator menu-collapsed"></li> -->
+    <!-- /END Separator -->
+    <!-- <a href="#" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-question fa-fw mr-3"></span>
                         <span class="menu-collapsed">Help</span>
                     </div>
                 </a> -->
-                <!-- <a href="#" data-toggle="sidebar-colapse"
+    <!-- <a href="#" data-toggle="sidebar-colapse"
                     class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span id="collapse-icon" class="fa fa-2x mr-3"></span>
                         <span id="collapse-text" class="menu-collapsed">Collapse</span>
                     </div>
                 </a> -->
-                <!-- Logo -->
-                <!-- <li class="list-group-item logo-separator d-flex justify-content-center">
+    <!-- Logo -->
+    <!-- <li class="list-group-item logo-separator d-flex justify-content-center">
                     <img src='https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg' width="30"
                         height="30" />
                 </li>
             </ul> -->
-            <!-- List Group END-->
-        <!-- </div> -->
-        <!-- sidebar-container END -->
+    <!-- List Group END-->
+    <!-- </div> -->
+    <!-- sidebar-container END -->
 
-        <!-- MAIN -->
-        <!-- <div class="col">
+    <!-- MAIN -->
+    <!-- <div class="col">
 
             <h1>
                 Collapsing Menu
@@ -212,11 +212,16 @@
 
 
         </div> -->
-        <!-- Main Col END -->
+    <!-- Main Col END -->
 
     <!-- </div> -->
     <!-- body-row END -->
 
+
+
+    {% block content %}
+    {% endblock %}
+    
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -227,12 +232,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-
-    {% block content %}
-
-    {% endblock %}
-
-    <script>
+    <!-- <script>
         // Hide submenus
         // $('#body-row .collapse').collapse('hide');
 
@@ -260,8 +260,9 @@
 
         //     // Collapse/Expand icon
         //     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-        }
-    </script>
+        // }
+    </script> -->
+
 </body>
 
 </html>

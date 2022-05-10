@@ -45,8 +45,8 @@ def token_required(f):
 @app.route('/index')
 @app.route('/')
 def index():
-    data = "asdasdasdsa"
-    return render_template("index.html", data= data)
+    # data = "asdasdasdsa"
+    return render_template("index.html")
 
 
 @app.route('/users', methods=['GET'])
