@@ -1,0 +1,4 @@
+SQLALCHEMY_DATABASE_URI = 'mysql://admin:wellfed382@localhost:3306/wellfed'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+DEBUG = True
+FLASK_DEBUG = True
