@@ -2,110 +2,316 @@
 {% block title %}Home Page{% endblock %}
 {% block content %}
 
-<!-- <div class="row">
-    <div class="col-xl-9 pb-4 mt-3">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="#tab1" data-bs-toggle="tab">Tab</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#tab2" data-bs-toggle="tab">Tab</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#tab3" data-bs-toggle="tab">Tab</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#tab4" data-bs-toggle="tab">Disabled</a>
-            </li>
-        </ul>
-        <div class="tab-content px-1 pt-3">
-            <div class="tab-pane active" id="tab1">
-                <p class="lead">Bootstrap</p>
-                Select a palette, change the <span class="text-primary toggles-ignore">primary</span>, <span class="text-secondary toggles-ignore">secondary</span>, 
-                <span class="text-success toggles-ignore">success</span>, <span class="text-danger toggles-ignore">danger</span>, 
-                <span class="text-info toggles-ignore">info</span>, and <span class="text-warning toggles-ignore">warning</span> colors. 
-                Choose from various Google Fonts, and modify most of the Bootstrap SASS variables. Click to generate your completely custom 
-                Bootstrap theme.
+<div class="content">
+    <!-- <div class="row">
+        <div class="col-xl-9 pb-4 mt-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#tab1" data-bs-toggle="tab">Tab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab2" data-bs-toggle="tab">Tab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab3" data-bs-toggle="tab">Tab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#tab4" data-bs-toggle="tab">Disabled</a>
+                </li>
+            </ul>
+            <div class="tab-content px-1 pt-3">
+                <div class="tab-pane active" id="tab1">
+                    <p class="lead">Bootstrap</p>
+                    Select a palette, change the <span class="text-primary toggles-ignore">primary</span>, <span class="text-secondary toggles-ignore">secondary</span>, 
+                    <span class="text-success toggles-ignore">success</span>, <span class="text-danger toggles-ignore">danger</span>, 
+                    <span class="text-info toggles-ignore">info</span>, and <span class="text-warning toggles-ignore">warning</span> colors. 
+                    Choose from various Google Fonts, and modify most of the Bootstrap SASS variables. Click to generate your completely custom 
+                    Bootstrap theme.
+                </div>
+                <div class="tab-pane" id="tab2">
+                    The whole idea of this tool is to make the Bootstrap customization process easier, and allow you to visualize changes along the way. 
+                    For most users it's designed to be point-and-click, while advanced users can delve into the SASS as desired. It's a 4-step process.
+                </div>
+                <div class="tab-pane" id="tab3">
+                    To know Bootstrap, is to know that there are a ton of SASS variables. Changing these variables is the very core of Bootstrap customization. 
+                    Even if you don't have any experience with SASS, you can use this to easily generate the CSS for your custom theme.
+                </div>
             </div>
-            <div class="tab-pane" id="tab2">
-                The whole idea of this tool is to make the Bootstrap customization process easier, and allow you to visualize changes along the way. 
-                For most users it's designed to be point-and-click, while advanced users can delve into the SASS as desired. It's a 4-step process.
+        </div>
+    </div> -->
+    
+    <div class="row">
+        <div class="form-group row mt-4 ml-4">
+            <label class="col-form-label form-control-label">De</label>
+            <div class="col-sm-4">
+                <input class="form-control flatpickr" type="text" value="Jane">
             </div>
-            <div class="tab-pane" id="tab3">
-                To know Bootstrap, is to know that there are a ton of SASS variables. Changing these variables is the very core of Bootstrap customization. 
-                Even if you don't have any experience with SASS, you can use this to easily generate the CSS for your custom theme.
+            <label class="col-form-label form-control-label">Até</label>
+            <div class="col-sm-5">
+                <input class="form-control flatpickr" type="text" value="Doe">
+            </div>
+            <button class="btn btn-sm btn-primary ms-2 mr-2" type="button" value="Submit" id="search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="btn btn-sm btn-primary ms-2 mr-2" type="button" id="delete">
+                <i class="fas fa-trash"></i>
+            </button>
+            <div class="row mt-4 ml-4">
+                {{logs_count}}
             </div>
         </div>
     </div>
-</div> -->
+    
+    <div class="row">
+        <div class="col-md-12 mt-4 ml-4 mr-4">
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>Nome do arquivo</th>
+                            <th>Data de criação</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-<div class="row">
-    <div class="form-group row mt-4 ml-4">
-        <label class="col-form-label form-control-label">De</label>
-        <div class="col-sm-4">
-            <input class="form-control flatpickr" type="text" value="Jane">
-        </div>
-        <label class="col-form-label form-control-label">Até</label>
-        <div class="col-sm-5">
-            <input class="form-control flatpickr" type="text" value="Doe">
-        </div>
-        <button class="btn btn-sm btn-primary ms-2 mr-2" type="button" value="Submit" id="search">
-            <i class="fas fa-search"></i>        
-        </button>
-        <button class="btn btn-sm btn-primary ms-2 mr-2" type="button" id="delete">
-            <i class="fas fa-trash"></i>
-        </button>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-12 mt-2 ml-2">
-        <div class="table-responsive">
-            <table class="table table-hover table-sm">
-                <tbody>
-                    <tr>
-                        <th class="w-25">Location</th>
-                        <th class="w-50">Date</th>
-                        <th class="w-25">Visits</th>
-                    </tr>
-                    <tr>
-                        <td>Westfield</td>
-                        <td>08.05.18 <span class="badge badge-primary">badge</span></td>
-                        <td>2323</td>
-                    </tr>
-                    <tr>
-                        <td>Galway</td>
-                        <td>08.05.18 <span class="badge badge-pill badge-primary">badge-pill</span></td>
-                        <td>5362</td>
-                    </tr>
-                    <tr class="table-primary">
-                        <td>Bern</td>
-                        <td>08.05.18</td>
-                        <td>153</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 </div>
 
 <script type="text/javascript">
     var example = flatpickr('#flatpickr');
-    
-    flatpickr('.flatpickr',{
-        onChange: console.log('triggerou')  
+
+    loadtable();
+
+    flatpickr('.flatpickr', {
+        onChange: console.log('triggerou')
     });
 
-    // on click em javascript
-    document.getElementById('search').onclick = function() {
+    document.getElementById('search').onclick = function () {
         alert('clicou search');
     }
 
-    document.getElementById('delete').onclick = function() {
+    document.getElementById('delete').onclick = function () {
         alert('clicou delete');
     }
 
+    function loadtable() {
+        var myData = {
+            "headings": [
+                "Name",
+                "Company",
+                "Ext.",
+                "Start Date",
+                "Email"
+            ],
+            "data": [
+                [
+                    "Hedwig F. Nguyen",
+                    "Arcu Vel Foundation",
+                    "9875",
+                    "03/27/2017",
+                    "nunc.ullamcorper@metusvitae.com"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ],
+                [
+                    "Genevieve U. Watts",
+                    "Eget Incorporated",
+                    "9557",
+                    "07/18/2017",
+                    "Nullam.vitae@egestas.edu"
+                ]
+            ]
+        };
 
-
+        var table = new DataTable("table", {
+            data: myData
+        });
+        // table.init();
+    }
 </script>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template, request, jsonify, url_for, redirect, make_response
 import jwt
-from .views import users
+from .views import users, logs
 import time, datetime
 from functools import wraps
 
@@ -45,8 +45,8 @@ def token_required(f):
 @app.route('/index')
 @app.route('/')
 def index():
-    # data = "asdasdasdsa"
-    return render_template("index.html")
+    logs_count = logs.count_logs_in_directory('C:/Users/gabri/Documents/Projects/teste')
+    return render_template("index.html", logs_count=logs_count)
 
 
 @app.route('/users', methods=['GET'])
